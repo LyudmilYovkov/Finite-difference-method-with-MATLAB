@@ -1,6 +1,6 @@
 %========================================================%
 % Boundary value problem of third type for the           %
-% stationery heat equation with volatile coefficients.    %
+% stationery heat equation with volatile coefficients.   %
 %========================================================%
 % (k(x)u'(x)) - q(x)u(x) = -f(x), 0 < x < X,             % 
 % +k(0)u'(0) = beta_1 * u(0) - mu_1,                     %
