@@ -122,8 +122,7 @@ end
 %==============================%
 % Thomas method (progonka)     %
 %==============================%
-y = Progon(system_matrix,right_side);
-y = y';
+y = Progon(system_matrix,right_side)';
 
 %==============================%
 % Absolute error.              %
