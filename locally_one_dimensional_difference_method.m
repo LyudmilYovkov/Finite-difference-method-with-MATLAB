@@ -233,7 +233,7 @@ abs_err = abs(ur-u);
 %========%
 figure(1)
 % % %
-subplot(1,2,1)
+subplot(2,2,1)
 % % %
 plot(x,ur(:,end-3,end-10),'b','LineWidth',3)
 hold on, grid on
@@ -245,7 +245,7 @@ ylabel('\bf{u(x)}')
 legend('\bf{Exact solution}','\bf{Approximate solution}')
 title('\it{x-direction}')
 % % %
-subplot(1,2,2)
+subplot(2,2,2)
 % % %
 plot(x,abs_err(:,end-3,end-10),'r:','LineWidth',3)
 hold on, grid on
@@ -255,6 +255,17 @@ xlabel(['\bf{x, z = }', num2str(z(end-3)), ...
 ylabel('\bf{Error}')
 legend('\bf{|u(x) - y|}')
 title('\it{x-direction}')
+% % %
+subplot(2,2,[3,4])
+% % %
+surf(z,x,u(:,:,end-10))
+colorbar
+set(gca,'FontSize',14)
+xlabel('\it{x}')
+ylabel('\it{z}')
+zlabel('\it{u}')
+legend('\bf{u(x,z,t)}')
+title(['t = ', num2str(t(end-10))])
 
 %=====================================%
 % Printing important information.     %
