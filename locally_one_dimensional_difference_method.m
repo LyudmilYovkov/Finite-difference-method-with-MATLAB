@@ -150,7 +150,6 @@ for n = 1 : T-1
         sol(:,j) = Progon(system_matrix, right_side);
     end
     
-    
     %===============================%
     % Matrix of the linear system.  %
     %===============================%
