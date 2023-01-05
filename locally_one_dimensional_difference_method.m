@@ -267,6 +267,20 @@ zlabel('\it{u}')
 legend('\bf{u(x,z,t)}')
 title(['t = ', num2str(t(end-10))])
 
+%=================================%
+% Creating a summarizing table    %
+% for fixed z and t.              %
+%=================================%
+format long;
+index_z = round(M/2);
+index_t = round(T/3);
+result_table = table;
+result_table.x = x';
+result_table.Exact = ur(:,index_z,index_t);
+result_table.Approximate = u(:,index_z,index_t);
+result_table.Error = abs_err(:,index_z,index_t);
+disp(result_table)
+
 %=====================================%
 % Printing important information.     %
 %=====================================%
@@ -275,6 +289,7 @@ rel_err = max(max(max(abs_err)))/max(max(max(u)))*100;
 display(['tau = ', num2str(tau)])
 display(['Maximal absolute error: ',num2str(Max)])
 display(['Relative error: ',num2str(rel_err)])
+format short;
 time = toc;
 display(['Elapsed time: ', num2str(time)])
 display('==================================')
